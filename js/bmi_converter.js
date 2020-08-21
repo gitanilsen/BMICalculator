@@ -73,7 +73,7 @@ function cal_standard_bmi() {
     error_box.innerHTML = "";
     if (SBMI < 18.5) {
       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">Your BMI is ${SBMI}.<span style="color:yellow"> You are UnderWeight.Eat Some Extra Food today. Hahaha :)</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a></div>`;
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a></div>`;
     } else if (SBMI > 18.5 && SBMI < 24.9) {
       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
       Your BMI is ${SBMI}.<span style="color:green">You have Healty Weight. Keep it up:)</span><br>
