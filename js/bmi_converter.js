@@ -1,9 +1,3 @@
-// let heightInFeet = document.querySelector("#h-in-feet").value;
-// let heightInInches = document.querySelector("#h-in-inches").value;
-// let height = heightInFeet * 12 + heightInInches;
-// let weightInPounds = document.querySelector("#w-in-pounds").value;
-// let standardBmi = (weightInPounds / [height ** 2]) * 703;
-
 // Change Menu
 let standard_menu = document.querySelector("#standard");
 let metric_menu = document.querySelector("#metric");
@@ -83,72 +77,26 @@ function cal_standard_bmi() {
     } else if (SBMI > 18.5 && SBMI < 24.9) {
       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
       Your BMI is ${SBMI}.<span style="color:green">You have Healty Weight. Keep it up:)</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     } else if (SBMI > 24.9 && SBMI < 29.9) {
       result_box.innerHTML = `<div style="display:inline-block;background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
       Your BMI is ${SBMI}.<span style="color:yellow">You are Overweight.Do some Exersise:)</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     } else if (SBMI > 29.9) {
       result_box.innerHTML = `<div style="display:inline-block;background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
-      Your BMI is ${SBMI}.<span style="color:red">You have Obesity or more than Overweight. Do Some Exercise :)<span><br><a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      Your BMI is ${SBMI}.<span style="color:red">You have Obesity or more than Overweight. Do Some Exercise :)<span><br><a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     } else {
       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">Your BMI is ${SBMI}.<span style="color:red">Something went wrong</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     }
   }
 }
 
-// // Calculate the metric BMI
-// function cal_metric_bmi() {
-//   let error_box = document.querySelector("#error");
-//   let heightInCentimeter = document.querySelector("#h-in-centimeter").value;
-//   let height = parseInt(heightInCentimeter) / 1000;
-//   let weightInKg = document.querySelector("#w-in-kgs").value;
-//   let metricBmi = weightInKg / [Math.pow(height, 2)];
-
-//   if (heightInCentimeter == "" || weightInKg == "") {
-//     var msg =
-//       "Error: Please fill all the details, You can't leave any input field as blank.";
-//     error_box.innerHTML = `<b>${msg}</b>`;
-//   } else if (isNaN(heightInCentimeter) || isNaN(weightInKg)) {
-//     var msg =
-//       "Error: Your inputs is not a Number. Please enter only numbers inside input field.";
-//     error_box.innerHTML = `<b>${msg}</b>`;
-//     document.querySelector("#h-in-centimeter").value = "";
-//     document.querySelector("#w-in-kgs").value = "";
-//   } else {
-//     let result_box = document.querySelector(".bmi-result");
-//     let MBMI = metricBmi.toFixed(2);
-//     error_box.innerHTML = "";
-//     if (MBMI < 18.5) {
-//       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">Your BMI is ${MBMI}.<span style="color:yellow"> You are UnderWeight.Eat Some Extra Food today. Hahaha :)</span><br>
-//       <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a></div>`;
-//     } else if (MBMI > 18.5 && MBMI < 24.9) {
-//       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
-//       Your BMI is ${MBMI}.<span style="color:green">You have Healty Weight. Keep it up:)</span><br>
-//       <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
-//       </div>`;
-//     } else if (MBMI > 24.9 && MBMI < 29.9) {
-//       result_box.innerHTML = `<div style="display:inline-block;background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
-//       Your BMI is ${MBMI}.<span style="color:yellow">You are Overweight.Do some Exersise:)</span><br>
-//       <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
-//       </div>`;
-//     } else if (MBMI > 29.9) {
-//       result_box.innerHTML = `<div style="display:inline-block;background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
-//       Your BMI is ${MBMI}.<span style="color:red">You have Obesity or more than Overweight. Do Some Exercise :)<span><br><a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
-//       </div>`;
-//     } else {
-//       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">Your BMI is ${MBMI}.<span style="color:red">Something went wrong</span><br>
-//       <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
-//       </div>`;
-//     }
-//   }
-// }
-
+// Calculate Metric BMI
 function cal_metric_bmi() {
   let error_box = document.querySelector("#error2");
   let heightInCentimeter = document.querySelector("#h-in-centimeter").value;
@@ -172,24 +120,24 @@ function cal_metric_bmi() {
     error_box.innerHTML = "";
     if (MBMI < 18.5) {
       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">Your BMI is ${MBMI}.<span style="color:yellow"> You are UnderWeight.Eat Some Extra Food today. Hahaha :)</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a></div>`;
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a></div>`;
     } else if (MBMI > 18.5 && MBMI < 24.9) {
       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
       Your BMI is ${MBMI}.<span style="color:green">You have Healty Weight. Keep it up:)</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     } else if (MBMI > 24.9 && MBMI < 29.9) {
       result_box.innerHTML = `<div style="display:inline-block;background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
       Your BMI is ${MBMI}.<span style="color:yellow">You are Overweight.Do some Exersise:)</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     } else if (MBMI > 29.9) {
       result_box.innerHTML = `<div style="display:inline-block;background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">
-      Your BMI is ${MBMI}.<span style="color:red">You have Obesity or more than Overweight. Do Some Exercise :)<span><br><a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      Your BMI is ${MBMI}.<span style="color:red">You have Obesity or more than Overweight. Do Some Exercise :)<span><br><a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     } else {
       result_box.innerHTML = `<div style="background:#1abc9c;color:#fff;box-shadow:0px 0px 5px black;border:1px solid gray;padding:1rem">Your BMI is ${MBMI}.<span style="color:red">Something went wrong</span><br>
-      <a href="../index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
+      <a href="index.html" style="display:inline-block;background:#34495e;color:#fff;text-decoration:none;padding:10px">Refresh</a>
       </div>`;
     }
   }
