@@ -16,11 +16,12 @@ function menu1() {
     standard_div.style.display = "block";
 
     // Style metric menu
+    metric_menu.classList.remove("class1");
     metric_menu.style.background = "#ecf0f1";
-    metric_menu.style.color = "#34495e";
+    metric_menu.style.color = "#9b59b6";
 
     // Style Standard Menu
-    standard_menu.style.background = "#34495e";
+    standard_menu.style.background = "#9b59b6";
     standard_menu.style.color = "#ecf0f1";
   }
 }
@@ -36,9 +37,10 @@ function menu2() {
 
     // Style Standard Menu
     standard_menu.style.background = "#ecf0f1";
-    standard_menu.style.color = "#34495e";
+    standard_menu.style.color = "#9b59b6";
+
     // Style metric menu
-    metric_menu.style.background = "#34495e";
+    metric_menu.style.background = "#9b59b6";
     metric_menu.style.color = "#ecf0f1";
   }
 }
