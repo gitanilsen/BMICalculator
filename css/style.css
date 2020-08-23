@@ -42,7 +42,7 @@ header .logo-text {
 /* BMI container */
 .bmi-container {
   width: 90%;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   /* background-color: green; */
   display: grid;
